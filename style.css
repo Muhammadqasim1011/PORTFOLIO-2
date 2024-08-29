@@ -1,0 +1,281 @@
+.hero-section {
+    max-height: 100vh;
+}
+
+.hero-hide{
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    height: 100px;
+    max-width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.logo{
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-item {
+    cursor: pointer;
+    transition: 0.3s all;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-item:hover {
+    color: var(--pink-clr);
+}
+
+.mode-item img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.mobile-view {
+    display: none;
+}
+
+#menu-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* End of Header */
+
+.hero-content{
+    max-width: 1400px;
+    width: 90%;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+.img-box{
+    width: 100%;
+    height: 510px;
+    position: relative;
+    overflow: hidden;
+}
+.mine {
+    position: absolute;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 400px;
+    left: 60px;
+    top: 56px;
+    z-index: -1;
+}
+
+.mine-cover{
+    position: absolute;
+    object-fit: cover;
+    width: 470px;
+    height: 470px;
+    top: 20px;
+    left: 24px;
+    z-index: -2;
+    transform: rotate(40deg);
+    animation: rotate 17s infinite cubic-bezier(1, 1, 1, 1);
+}
+
+.hero-content .right{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-content .right h1{
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.hero-content .right h1 .pink-clr{
+    font-size: 2rem;
+}
+
+.hero-social{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.hero-social img {
+    width: 30px;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 1140px) {
+    body{
+        overflow: visible;
+    }
+    .hero-content{
+        grid-template-columns: 1fr;
+        padding-bottom: 100px;
+    }
+
+    .img-box{
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .mine{
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        
+        width: 300px;
+        height: 300px;
+    }
+    .mine-cover{
+        left: 50%;
+        translate: -50%;
+        width: 360px;
+        height: 360px;
+    }
+
+    .hero-content .right{
+        width: 90%;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+
+@media (max-width: 870px) {
+    .header {
+        height: 80px;
+    }
+
+    .logo{
+        font-size: 2rem;
+    }
+
+    .mobile-view {
+        display: block;
+    }
+
+    .nav-items {
+        position: absolute;
+        flex-direction: column;
+        gap: 0.4rem;
+        background: var(--dark-clr);
+        color: var(--light-clr);
+        padding: 0 0;
+        top: 100%;
+        right: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s;
+        border-radius: 10px;
+        z-index: 1000;
+        user-select: none;
+    }
+    
+    .nav-items.show {
+        animation: mobileNavShow 0.4s ease-in-out forwards;
+        visibility: visible;
+    }
+    .nav-items.hide {
+        animation: mobileNavHide 0.4s ease-in-out forwards;
+
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .img-box{
+        width: 270px;
+        height: 270px;
+    }
+    .mine{
+        width: 200px;
+        height: 200px;
+    }
+    .mine-cover{
+        width: 230px;
+        height: 230px;
+    }
+
+    .hero-content .right{
+        gap: 3rem;
+    }
+    .hero-content .right h1{
+        font-size: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    .hero-content .right h1 .pink-clr{
+        font-size: 1.4rem;
+    }
+    .btn{
+        padding: 7px 14px;
+    }
+}
+
+
+@keyframes mobileNavShow {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        height: 249px;
+        opacity: 1;
+        padding: 1rem 3rem;
+    }
+}
+@keyframes mobileNavHide {
+    from {
+        height: 249px;
+        opacity: 1;
+        padding: 1rem 3rem;    
+    }
+    
+    to {
+        height: 0px;
+        opacity: 0;
+        padding: 0 0;
+    }
+}
+
+@keyframes rotate {
+    form{
+        transform: rotate(40deg);
+    }
+    to{
+        transform: rotate(400deg);
+    }
+}

@@ -1,0 +1,82 @@
+.service-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 170px 0 20px;
+    gap: 1rem;
+    border-radius: ;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--light-clr);
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    /* Ensures that the pseudo-element stays within the card */
+}
+
+.card img {
+    width: 70px;
+    background: var(--pink-clr);
+    border-radius: 10%;
+    padding: 10px;
+}
+
+.service-planes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 170px 0 20px;
+    gap: 1rem;
+    border-radius: ;
+}
+
+.plan {
+    background: var(--light-clr);
+    padding: 7rem  2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: relative;
+}
+
+.plan::before {
+    position: absolute;
+    content: "";
+    background-image: url(./Assets/code.png);
+    background-color: var(--pink-clr);
+    background-position: center;
+    background-size: cover;
+    width: 4.2rem;
+    aspect-ratio: 1;
+    background-color: var(--pink-clr);
+    border-radius: 10%;
+    top: 2rem;
+    left: 2rem;
+}
+
+.plan ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+@media (max-width:960px) {
+    .service-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .service-planes{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:600px) {
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+    .service-planes{
+        grid-template-columns: 1fr;
+    }
+}

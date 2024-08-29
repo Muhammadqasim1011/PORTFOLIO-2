@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="message.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body class="light-mode">
+    <div id="overlay-effect" class=""></div>
+    <img src="./Assets/close-dark.png" id="close-section" class="" alt="">
+    <section class="hero-section">
+        <header class="header">
+            <h2 class="logo"><span class="pink-clr">Q</span>ASIM</h2>
+            <nav>
+                <ul class="nav-items" id="menu-items">
+                    <li class="nav-item" data-section="about-section">ABOUT</li>
+                    <li class="nav-item" data-section="service-section">Service</li>
+                    <li class="nav-item" data-section="resume-section">RESUME</li>
+                    <li class="nav-item" data-section="portfolio-section">PORTFOLIO</li>
+                    <li class="nav-item" data-section="contact-section">CONTACT</li>
+                    <li onclick="changeMood()" id="mode-btn" class="mode-item"><img src="./Assets/sun.png" alt=""></li>
+                </ul>
+            </nav>
+            <div class="mobile-view">
+                <img id="menu-icon" onclick="showMobileMenu()" src="./Assets/menu-dark.png" alt="">
+            </div>
+        </header>
+
+        <div class="hero-content">
+
+            <div class="left">
+
+                <div class="img-box">
+                    <img class="mine" src="./Assets/mine.png" alt="">
+                    <img class="mine-cover" id="mine-cover" src="./Assets/banner-02-light.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <div class="hero-text">
+                    <h1><span class="pink-clr">Hello I'm</span><span>Muhammad Qasim</span></h1>
+                    <p>I can help turn your ideas into real things! I make websites that look good and are easy to use.
+                        I create beautiful and easy-to-use websites that work well on all devices. Let's make something
+                        cool together</p>
+                </div>
+
+                <div class="hero-social">
+                    <p>Follow me on:</p>
+                    <a href="
+                    https://www.linkedin.com/in/muhammad-qasim-a4bb1121b"><img src="./Assets/facebook.png" alt=""></a>
+                    <a href="
+                    https://x.com/Muhamma96604403?t=INxyqoYFGxuTcXzvo7T5Zw&s=09"><img src="./Assets/twitter.png"
+                            alt=""></a>
+                    <a href="https://github.com/Muhammadqasim1011"><img src="./Assets/whatsapp.png" alt=""></a>
+                    <a href="mailt0:akhundqasim1011@gmail.com"><img src="./Assets/instagram.png" alt=""></a>
+                </div>
+
+                <div class="hero-btn">
+                    <button onclick="revealForm()" class="btn">Message Me</button>
+                    <button onclick="revealForm()" class="btn btn-dark">Hire Me Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="message-box" id="message-box">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="cd7b6986-b933-463f-b827-0bd122749db6">
+
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Email address.." required>
+            <textarea name="message" cols="30" rows="10" placeholder="Write a message here..." required></textarea>
+            <div class="form-btns">
+                <input type="submit" value="Send Message" class="btn">
+                <input class="btn" id="close-btn" type="button" onclick="closeForm()" value="Close">
+            </div>
+        </form>
+    </div>
+
+    <section class="about-section all-section content" id="about-section">
+        <div class="wrapper">
+            <div class="about-content">
+
+                <div class="left">
+
+                    <div class="about-text">
+                        <h3 class="pink-clr">Who I am?</h3>
+                        <h2>I'm Muhammad Qasim.</h2>
+                        <p>Welcome to our website! We are passionate about delivering top-quality services to meet your
+                            needs. Our team is dedicated to providing excellent customer support and ensuring your
+                            satisfaction. With years of experience in the industry, we pride ourselves on offering
+                            reliable solutions that help you succeed</p>
+                    </div>
+
+                    <div class="information">
+                        <p><strong>First Name:</strong> Muhammad</p>
+                        <p><strong>Last Name:</strong> Qasim</p>
+                        <p><strong>Age:</strong> 22 years</p>
+                        <p><strong>Email:</strong> akhundqasim1011@gamil.com</p>
+                        <p><strong>Phone:</strong> +923239292713</p>
+                        <p><strong>LinkedIn:</strong> Muhammad</p>
+                        <p><strong>Language:</strong> English, Urdu, Pashto</p>
+                        <span><strong>Address:</strong>
+                            <address>village maryam-zai, kohat road,</address>
+                            <address>Peshawer, KPK, Pakistan</address>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <img src="./Assets/mine.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section all-section content" id="service-section">
+        <div class="wrapper">
+            <div class="service-content">
+                <div class="page-header">
+                    <h1>Services</h1>
+                    <h2><span class="dark-clr">my</span> <span class="pink-clr">services</span></h2>
+                </div>
+
+                <div class="service-cards">
+                    <!-- Service cards will be inserted dynamically here -->
+                </div>
+
+                <div class="page-header">
+                    <h1>Expenses</h1>
+                    <h2><span class="dark-clr">service</span> <span class="pink-clr">plans</span></h2>
+                </div>
+
+                <div class="service-planes">
+                    <!-- Service plans will be inserted dynamically here -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="resume-section all-section content" id="resume-section">
+        <div class="wrapper">
+            <div class="resume-content">
+                <div class="page-header">
+                    <h1>Resume</h1>
+                    <h2><span class="dark-clr">My</span> <span class="pink-clr"> Resume</span></h2>
+                </div>
+
+                <div class="resume-container">
+
+                    <div class="education-cards">
+                        <h2>Education</h2>
+                        <!-- Cards will be displayed dynamicaly -->
+                    </div>
+
+                    <div class="experience-cards">
+                        <h2>Experience</h2>
+                        <!-- Cards will be displayed dynamicaly -->
+                    </div>
+
+                </div>
+
+                <div class="page-header">
+                    <h1>Quality</h1>
+                    <h2><span class="dark-clr">My</span> <span class="pink-clr"> Skills</span></h2>
+                </div>
+
+                <div class="skill-container">
+                    <div class="my-skills">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section all-section content" id="portfolio-section">
+        <div class="wrapper">
+            <div class="portfolio-content">
+
+                <div class="page-header">
+                    <h1>Portfolio</h1>
+                    <h2><span class="dark-clr">My</span> <span class="pink-clr"> Portfolio</span></h2>
+                </div>
+
+                <div class="project-nav">
+                    <button class="btn project-item" data-type="ALL">ALL</button>
+                    <button class="btn project-item" data-type="brand website">BRAND</button>
+                    <button class="btn project-item" data-type="landing page">LANDING PAGE</button>
+                    <button class="btn project-item" data-type="portfolio website">PORTFOLIOS</button>
+                </div>
+
+                <div class="project-cards">
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <section class="contact-section all-section content" id="contact-section">
+        <div class="wrapper">
+            <div class="contact-content">
+                <div class="page-header">
+                    <h1>Portfolio</h1>
+                    <h2><span class="dark-clr">My</span> <span class="pink-clr"> Portfolio</span></h2>
+                </div>
+            </div>
+
+            <div class="contact-container">
+
+                <div class="my-information">
+
+                    <div class="myname">
+                        <h3>Name</h3>
+                        <h2>Muhammad Qasim</h2>
+                    </div>
+
+                    <div class="myaddress">
+                        <h3>Address</h3>
+                        <h2>
+                            <address>Peshawer, KPK,</address>
+                            <address>Pakistan</address>
+                        </h2>
+                    </div>
+
+                    <div class="callme">
+                        <h3>Call Me</h3>
+                        <h2>+923239292713</h2>
+                    </div>
+
+                    <div class="emailme">
+                        <h3>Email Me</h3>
+                        <h2>akhundqasim1011 @gmail.com</h2>
+                    </div>
+                </div>
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="cd7b6986-b933-463f-b827-0bd122749db6">
+
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Email address.." required>
+                    <textarea name="message" cols="30" rows="10" placeholder="Write a message here..."
+                        required></textarea>
+                    <input type="submit" value="Send Message" class="btn">
+                </form>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="model.js"></script>
+    <script src="animate.js"></script>
+    <script src="service.js"></script>
+    <script src="resume.js"></script>
+    <script src="portfolio.js"></script>
+    <script src="contact.js"></script>
+</body>
+
+</html>

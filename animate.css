@@ -1,0 +1,55 @@
+#overlay-effect {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    transform: translateY(100%);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    background: var(--light-clr);
+    bottom: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+#overlay-effect.animate-up {
+    -webkit-animation-name: overlayEffectUp;
+    animation-name: overlayEffectUp;
+}
+
+#overlay-effect.animate-down {
+    -webkit-animation-name: overlayEffectDown;
+    animation-name: overlayEffectDown;
+}
+
+@keyframes overlayEffectUp {
+    0% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    35%{
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    100% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes overlayEffectDown {
+    0% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    35%, 65% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    100% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+}

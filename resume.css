@@ -1,0 +1,106 @@
+.resume-container{
+    padding: 140px 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.resume-container h2{
+    padding: 1rem 2rem;
+    background: var(--light-clr);
+    color: var(--dark-clr);
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.resume-container .education-cards,
+.resume-container .experience-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.resume-container .education-card{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+}
+
+.education-card .card-img-box{
+    background: var(--light-clr);
+    border-radius: 49%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-card img{
+width: 49px;
+aspect-ratio: 1;
+padding: 10px;
+}
+
+.education-card .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+
+.skill-container {
+    padding: 170px 0 20px;
+}
+
+.my-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 8rem;
+    background: var(--light-clr);
+    padding: 3rem;
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--gray-clr);
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--pink-clr);
+    border-radius: 5px 0 0 5px;
+}
+
+.animate-skill {
+    animation: fillSkillBar 2s ease-out forwards;
+}
+
+
+@media (max-width:960px) {
+    .resume-container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .my-skills{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@keyframes fillSkillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
